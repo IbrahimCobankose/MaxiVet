@@ -1,0 +1,45 @@
+# --- KESİNLİKLE GİZLİ KALMASI GEREKENLER (Güvenlik) ---
+android/app/google-services.json
+lib/firebase_options.dart
+.env
+android/key.properties
+
+# --- KULLANILMAYAN PLATFORMLAR (Sadece Android Yüklenecek) ---
+/ios/
+/linux/
+/macos/
+/web/
+/windows/
+
+# --- STANDART FLUTTER VE DART GİZLEMELERİ ---
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+**/doc/api/
+app.*.symbols
+app.*.map.json
+
+# --- ANDROID DERLEME VE YEREL DOSYALAR ---
+**/android/local.properties
+**/android/app/build/
+**/android/.gradle/
+**/android/captures/
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# --- IDE VE SİSTEM DOSYALARI ---
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.history
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/

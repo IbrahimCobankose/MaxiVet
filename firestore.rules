@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Kullanıcının giriş yapıp yapmadığını kontrol eden yardımcı fonksiyon
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // İşlem yapan kişinin bir klinik yetkilisi olup olmadığını kontrol eden fonksiyon
+    // ('clinics' koleksiyonunda bu UID ile bir kayıt varsa o bir kliniktir)
+    function isClinic() {
+      return exists(/databases/$(database)/documents/clinics/$(request.auth.uid));
+    }
+
+    // --- 1. KULLANICI PROFİLLERİ ---
+    match /pet_owners/{userId} {
+      allow read: if isAuthenticated();
+      // Hasta sahibi sadece kendi kişisel bilgilerini güncelleyebilir
+      allow write: if request.auth.uid == userId; 
+    }
+
+    match /clinics/{clinicId} {
+      // Herkes klinikleri arayıp görebilir
+      allow read: if isAuthenticated(); 
+      allow write: if request.auth.uid == clinicId;
+    }
+
+    // --- 2. HAYVANLAR (DOSTLARIM) ---
+    match /pets/{petId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // --- 3. TIBBİ VERİLER (READ-ONLY KISITLAMASI) ---
+    // NFR1.2 Kuralı: Hasta sahipleri okuyabilir, SADECE KLİNİKLER veri ekleyip/silebilir
+    
+    match /lab_results/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isClinic(); 
+    }
+    
+    match /vaccinations/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isClinic(); 
+    }
+    
+    match /examinations/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isClinic();
+    }
+    
+    match /operations/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isClinic();
+    }
+
+    // --- 4. ORTAK KULLANIM KOLEKSİYONLARI ---
+    match /appointments/{document=**} {
+      allow read, write: if isAuthenticated(); 
+    }
+    match /messages/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /notifications/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /med_reminders/{document=**} {
+      // İlaç hatırlatıcılarını hasta sahipleri kendi cihazlarında kurar
+      allow read, write: if isAuthenticated(); 
+    }
+    match /weight_logs/{document=**} {
+      // Kilo takibini hasta sahipleri kendileri girmelidir
+      allow read, write: if isAuthenticated(); 
+    }
+    match /clinic_enrollments/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}
