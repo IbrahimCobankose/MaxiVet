@@ -1,4 +1,4 @@
-# MaxiVet
+# MaxiVet - Veterinary Clinic and Pet Management System
 
 MaxiVet is a comprehensive mobile application developed to digitalize and centralize the processes between veterinary clinics and pet owners. It integrates appointment management, medical history tracking, laboratory results, and daily treatment routines into a single, seamless platform.
 
@@ -62,7 +62,7 @@ MaxiVet solves this business problem by offering a two-sided architecture:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/maxivet.git](https://github.com/YOUR_USERNAME/maxivet.git)
+   git clone https://github.com/IbrahimCobankose/maxivet.git
    ```
 2. Navigate to the project directory:
    ```bash
