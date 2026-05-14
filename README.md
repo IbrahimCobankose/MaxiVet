@@ -72,14 +72,18 @@ MaxiVet solves this business problem by offering a two-sided architecture:
    ```bash
    flutter pub get
    ```
-4.Firebase Configuration:
-    This project uses Firebase. You must provide your own google-services.json (for Android) and firebase_options.dart files to connect the app to your Firebase instance.
-    Place the google-services.json file in the android/app/ directory.
-    Generate or place the firebase_options.dart file in the lib/ directory.
+4. Firebase Configuration:
+
+   This project uses Firebase. You must provide your own `google-services.json` (for Android) and `firebase_options.dart` files to connect the app to your Firebase instance.
+
+   Place the `google-services.json` file in the `android/app/` directory.
+
+   Generate or place the `firebase_options.dart` file in the `lib/` directory.
+
 5. Run the application:
-   ```bash
+```bash
    flutter run
-   ```
+```
 ## Project Team
 * [Kanican Köseoğlu](https://github.com/KaniCanKOSEOGLU)
 * [Enes Türkmenoğlu](https://github.com/enestrkmngll)
