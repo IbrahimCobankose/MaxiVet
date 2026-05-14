@@ -76,6 +76,7 @@ MaxiVet solves this business problem by offering a two-sided architecture:
 5. Run the application:
    ```bash
    flutter run
+   ```
 ## Project Team
 * [Kanican Köseoğlu](https://github.com/KaniCanKOSEOGLU)
 * [Enes Türkmenoğlu](https://github.com/enestrkmngll)
