@@ -63,3 +63,20 @@ MaxiVet solves this business problem by offering a two-sided architecture:
 1. Clone the repository:
    ```bash
    git clone [https://github.com/YOUR_USERNAME/maxivet.git](https://github.com/YOUR_USERNAME/maxivet.git)
+2. Navigate to the project directory:
+   ```bash
+   cd maxivet
+3. Install dependencies:
+   ```bash
+   flutter pub get
+4.Firebase Configuration:
+    This project uses Firebase. You must provide your own google-services.json (for Android) and firebase_options.dart files to connect the app to your Firebase instance.
+    Place the google-services.json file in the android/app/ directory.
+    Generate or place the firebase_options.dart file in the lib/ directory.
+5. Run the application:
+   ```bash
+   flutter run
+## Project Team
+* [Kanican Köseoğlu](https://github.com/KaniCanKOSEOGLU)
+* [Enes Türkmenoğlu](https://github.com/enestrkmngll)
+* [İbrahim Çobanköse](https://github.com/IbrahimCobankose)
