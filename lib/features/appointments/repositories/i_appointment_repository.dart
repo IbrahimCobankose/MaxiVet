@@ -12,7 +12,7 @@ abstract class IAppointmentRepository {
     DateTime? date,
   });
 
-  // YENİ: Müşterinin TÜM hayvanlarına ait randevuları getiren fonksiyon
+  // Müşterinin TÜM hayvanlarına ait randevuları getiren fonksiyon
   Future<List<Appointment>> getAppointmentsByPetIds(List<String> petIds);
 
   Future<void> updateAppointmentStatus(String id, String status);

@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-// İçe aktarma yolları mimariye uygun şekilde ayarlandı
 import '../../../core/providers/repository_providers.dart';
 import '../models/weight_log_model.dart';
 

@@ -34,7 +34,7 @@ class _BookAppointmentViewState extends ConsumerState<BookAppointmentView> {
   bool _isLoadingSlots = false;
   List<Appointment> _bookedAppointments = [];
 
-  // YENİ: Klinikleri yavaşlatan FutureBuilder yerine basit bir önbellek (Cache) kullanıyoruz
+  //Klinikleri yavaşlatan FutureBuilder yerine basit bir önbellek (Cache) kullanıyoruz
   final Map<String, String> _clinicNamesCache = {};
 
   // Seçenek Listeleri
@@ -94,7 +94,7 @@ class _BookAppointmentViewState extends ConsumerState<BookAppointmentView> {
     });
   }
 
-  // YENİ: Kliniğin adını hafızaya alan fonksiyon
+  // Kliniğin adını hafızaya alan fonksiyon
   Future<void> _fetchClinicNameIfNeeded(String clinicId) async {
     if (!_clinicNamesCache.containsKey(clinicId)) {
       final clinic = await ref

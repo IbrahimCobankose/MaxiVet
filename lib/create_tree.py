@@ -37,7 +37,7 @@ def agac_yapisini_yazdir(baslangic_dizini=".", on_ek="", yoksayilacak_klasorler=
             agac_yapisini_yazdir(yol, on_ek + uzanti, yoksayilacak_klasorler, dosya)
 
 if __name__ == "__main__":
-    cikti_dosya_adi = "mevcutMimari.txt"
+    cikti_dosya_adi = "file_tree.txt"
     
     # Dosyayı yazma modunda ('w') ve utf-8 formatında açıyoruz
     with open(cikti_dosya_adi, "w", encoding="utf-8") as f:

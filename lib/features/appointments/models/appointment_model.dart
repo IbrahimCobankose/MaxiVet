@@ -7,7 +7,7 @@ class Appointment {
   final String type; // Randevu türü (Örn: Genel Muayene, Aşı)
   final String status; // Durumu (Örn: pending, confirmed, cancelled, completed)
 
-  // YENİ EKLENEN ALAN: Hasta sahibinin randevu alırken gireceği şikayet veya not
+  // Hasta sahibinin randevu alırken gireceği şikayet veya not
   final String? reason;
 
   Appointment({
