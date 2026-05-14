@@ -62,11 +62,11 @@ MaxiVet solves this business problem by offering a two-sided architecture:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/IbrahimCobankose/maxivet.git
+   git clone [https://github.com/IbrahimCobankose/MaxiVet-Veterinary-Clinic-and-Pet-Management-System.git](https://github.com/IbrahimCobankose/MaxiVet-Veterinary-Clinic-and-Pet-Management-System.git)
    ```
 2. Navigate to the project directory:
    ```bash
-   cd maxivet
+   cd MaxiVet-Veterinary-Clinic-and-Pet-Management-System
    ```
 3. Install dependencies:
    ```bash
