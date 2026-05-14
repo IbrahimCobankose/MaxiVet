@@ -86,6 +86,7 @@ Mevcut Dizin: /home/coban/Desktop/maxivet
 │   ├── local.properties
 │   ├── maxivet_android.iml
 │   └── settings.gradle.kts
+├── file_tree.txt
 ├── firebase.json
 ├── firestore.rules
 ├── ios/
@@ -151,13 +152,13 @@ Mevcut Dizin: /home/coban/Desktop/maxivet
 │   └── RunnerTests/
 │       └── RunnerTests.swift
 ├── lib/
-│   ├── agac_olustur.py
 │   ├── core/
 │   │   ├── providers/
 │   │   │   ├── app_state_providers.dart
 │   │   │   └── repository_providers.dart
 │   │   └── routing/
 │   │       └── app_router.dart
+│   ├── create_tree.py
 │   ├── features/
 │   │   ├── appointments/
 │   │   │   ├── controllers/
